@@ -113,6 +113,7 @@ namespace Crawler.Services
                 servidoresRequestList.Add(servidor);
             }
             
+            //Só estou realizando o envio de 10 objetos apenas, caso queira enviar todos remover o take(10)
             return JsonSerializer.Serialize(servidoresRequestList.Take(10));
         }
 
